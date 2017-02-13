@@ -173,7 +173,7 @@ if(BUILD_TESTING)
       ENV RMW_IMPLEMENTATION=${rmw_implementation}
       APPEND_ENV AMENT_PREFIX_PATH=${CMAKE_CURRENT_BINARY_DIR}/test_ament_index/$<CONFIG>
       APPEND_LIBRARY_DIRS "${append_library_dirs}"
-      TIMEOUT 90)
+      TIMEOUT 190)
   endmacro()
 
   set(append_library_dirs "${CMAKE_CURRENT_BINARY_DIR}")
