@@ -95,7 +95,7 @@ if(BUILD_TESTING)
 
       ament_add_nose_test(test_tutorial_${exe_list_underscore}${target_suffix}
         "${CMAKE_CURRENT_BINARY_DIR}/test_${exe_list_underscore}${target_suffix}_$<CONFIG>.py"
-        TIMEOUT 60
+        TIMEOUT 300
         ENV
         RCL_ASSERT_RMW_ID_MATCHES=${rmw_implementation}
         RMW_IMPLEMENTATION=${rmw_implementation})
