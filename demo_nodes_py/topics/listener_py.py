@@ -16,11 +16,12 @@ import sys
 
 import rclpy
 
-from std_msgs.msg import String
+# from std_msgs.msg import String
+from vision_msgs.msg import Detection3DArray
 
 
 def chatter_callback(msg):
-    print('I heard: [%s]' % msg.data)
+    print('I heard: [%r]' % msg)
 
 
 def main(args=None):
@@ -31,7 +32,8 @@ def main(args=None):
 
     node = rclpy.create_node('listener')
 
-    sub = node.create_subscription(String, 'chatter', chatter_callback)
+    # sub = node.create_subscription(String, 'chatter', chatter_callback)
+    sub = node.create_subscription(Detection3DArray, 'chatter', chatter_callback)
     assert sub  # prevent unused warning
 
     while rclpy.ok():
