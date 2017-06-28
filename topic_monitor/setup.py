@@ -1,7 +1,9 @@
+from ament_python.data_files import get_data_files
 from ament_python.script_dir import install_scripts_to_libexec
 from setuptools import setup
 
 package_name = 'topic_monitor'
+data_files = get_data_files(package_name)
 install_scripts_to_libexec(package_name)
 
 setup(
